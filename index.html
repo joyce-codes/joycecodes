@@ -5,13 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boxing Arena</title>
     <style>
-        body { margin: 0; overflow: hidden; }
-        canvas { display: block; }
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .gif-container {
+            width: 100vw; /* Full width of viewport */
+            height: 100vh; /* Full height of viewport */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Place behind other content */
+        }
+        .gif {
+            width: 100%; /* Full width of container */
+            height: 100%; /* Full height of container */
+        }
+        .hidden {
+            display: none; /* Hide element */
+        }
     </style>
 </head>
 <body>
-  <img src="Gif.gif" alt="Original GIF">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- GIF container -->
+    <div class="gif-container">
+        <!-- GIF image -->
+        <img id="gif" class="gif" src="Gif.gif" alt="Animation">
+    </div>
+
+    <!-- Boxing arena -->
+    <div id="arena" class="hidden">
+        <img src="Boxing_Ring.webp" alt="Boxing Ring">
+        <div class="judge" id="judge1"></div>
+        <div class="judge" id="judge2"></div> 
+        <div class="judge" id="judge3"></div>
+        <div class="fighter" id="fighter1"></div>
+        <div class="fighter" id="fighter2"></div>
+        <div class="crowd"></div>
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>

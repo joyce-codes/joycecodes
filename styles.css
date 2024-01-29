@@ -1,1 +1,5 @@
-/* Basic styles */
+.hidden {
+  display: none; 
+}
+
+/* Styles for arena elements */

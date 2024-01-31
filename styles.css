@@ -1,5 +1,21 @@
+/* Basic styles */
 .hidden {
   display: none; 
 }
 
 /* Styles for arena elements */
+
+/* Styles for arena elements */
+#arena {
+    width: 80vw; /* Set a specific width */
+    height: 50vh; /* Set a specific height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+#arena img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensure the image fits without stretching */
+}
